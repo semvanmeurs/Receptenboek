@@ -599,5 +599,62 @@
       "Recept aangeduid als Russisch.",
       "Totale tijd is geschat op basis van de minimale koeltijd van 3 uur."
     ]
+  },
+  {
+    "id": "koriander-kipcurry-groene-kipcurry",
+    "title": "Koriander-kipcurry (groene kipcurry)",
+    "category": "Hoofdgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 45,
+    "time_estimated": false,
+    "ingredient_groups": [
+      {
+        "name": "Groene pasta en kip",
+        "items": [
+          "1 grote bos koriander (15-18 takjes)",
+          "5 groene chilipepers",
+          "8 teentjes knoflook",
+          "5 cm gember",
+          "1/2 tl kurkuma",
+          "1 tl zout",
+          "500 g kip met bot, in kleine stukken",
+          "120 ml water"
+        ]
+      },
+      {
+        "name": "Overig",
+        "items": [
+          "2 tl olie",
+          "3 rode uien, fijngehakt",
+          "240 ml dikke kokosmelk"
+        ]
+      },
+      {
+        "name": "Specerijenpasta",
+        "items": [
+          "2 tl maanzaad",
+          "2 kardemompeulen",
+          "2 kruidnagels",
+          "60 ml water"
+        ]
+      }
+    ],
+    "steps": [
+      "Pureer koriander, groene chilipepers, knoflook, gember, kurkuma en zout met 120 ml water tot een fijne pasta. Meng de pasta door de kip. Laat eventueel 10-15 minuten marineren.",
+      "Verhit de olie en bak de rode ui enkele minuten tot deze zacht is. Voeg de kip met de groene pasta toe.",
+      "Gaar de kip in een snelkookpan op middelhoog vuur gedurende 4 drukcycli (whistles). Zet het vuur uit en laat de druk vanzelf afnemen.",
+      "Rooster ondertussen maanzaad, kardemom en kruidnagels droog tot ze geuren. Maal ze met 60 ml water tot een fijne pasta en roer deze door de gare kip.",
+      "Voeg de kokosmelk toe en verwarm tot de curry net zacht begint te pruttelen. Laat niet langdurig doorkoken.",
+      "Serveer met rijst of chapati."
+    ],
+    "source": "Kannamma Cooks – Coriander Chicken Curry",
+    "page": null,
+    "notes": [
+      "De bron geeft 15 minuten voorbereiding en 30 minuten kooktijd op.",
+      "De marineertijd van 10-15 minuten is optioneel."
+    ]
   }
 ]
