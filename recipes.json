@@ -1,0 +1,603 @@
+[
+  {
+    "id": "kiptajine-olijven-ingemaakte-citroen",
+    "title": "Kiptajine met olijven en ingemaakte citroen",
+    "category": "Hoofdgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 120,
+    "cook_time_minutes": 60,
+    "total_time_minutes": 195,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "1 biologische kip, in stukken, of ongeveer 800 g kippenpoten en kippendijen",
+          "1 middelgrote ui, gesnipperd",
+          "3 el zonnebloemolie",
+          "1 ingemaakte citroen, in partjes of reepjes",
+          "Blonde olijven, bijvoorbeeld Kalamata"
+        ]
+      },
+      {
+        "name": "Marinade",
+        "items": [
+          "2 el koriander, gehakt",
+          "2 el bladpeterselie, gehakt",
+          "4 teentjes knoflook, geperst",
+          "Sap van 1 citroen",
+          "1 tl gemberpoeder",
+          "1 tl kurkuma",
+          "1/2 tl gemalen saffraandraadjes (ongeveer 10 draadjes)",
+          "1/2 tl peper",
+          "1/2 tl zout"
+        ]
+      },
+      {
+        "name": "Garnering",
+        "items": [
+          "Sap van 1/2 citroen",
+          "1 el vers gehakte bladpeterselie en koriander"
+        ]
+      }
+    ],
+    "steps": [
+      "Meng de ingrediënten voor de marinade en wrijf de kip ermee in. Laat minimaal 2 uur, liefst een nacht, afgedekt in de koelkast marineren.",
+      "Verwarm de tajine langzaam. Braad de kip rondom aan in de olie, haal hem eruit en fruit de gesnipperde ui in het achtergebleven vet.",
+      "Leg de kip terug met de resterende marinade en een klein scheutje water. Dek af en laat ongeveer 50 minuten op laag vuur garen; voeg zo nodig beetje bij beetje water toe.",
+      "Spoel de ingemaakte citroen af, snijd in partjes en verdeel met de olijven over de tajine. Laat nog 5 tot 10 minuten zacht sudderen.",
+      "Besprenkel voor het serveren met citroensap en garneer met verse peterselie en koriander. Serveer met brood."
+    ],
+    "source": "Kookboekfoto",
+    "page": "226",
+    "notes": [
+      "Totale tijd is geschat inclusief minimale marineertijd."
+    ]
+  },
+  {
+    "id": "kiptajine-rode-ui-rozijnen-kaneel",
+    "title": "Kiptajine met rode ui, rozijnen en kaneel",
+    "category": "Hoofdgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 60,
+    "cook_time_minutes": 35,
+    "total_time_minutes": 110,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "1 biologische kip, in stukken gesneden",
+          "2 el zonnebloemolie",
+          "4 middelgrote uien, in ringen",
+          "1 tl kaneel",
+          "Handvol blanke rozijnen, goed gewassen",
+          "2 el bladpeterselie, gehakt"
+        ]
+      },
+      {
+        "name": "Marinade",
+        "items": [
+          "3 el zonnebloemolie",
+          "2 el koriander, gehakt",
+          "1 tl gemberpoeder",
+          "1 tl kurkuma",
+          "2 teentjes knoflook, geperst",
+          "1 tl zout",
+          "1/2 tl peper, uit de molen"
+        ]
+      }
+    ],
+    "steps": [
+      "Meng zonnebloemolie, koriander, gember, kurkuma, knoflook, peper en zout. Wrijf de kip ermee in en laat minimaal 1 uur afgedekt in de koelkast marineren.",
+      "Verwarm de tajine langzaam en bak de kip aan in de zonnebloemolie. Voeg de resterende marinade toe, dek af en laat 5 minuten zacht sudderen.",
+      "Voeg ongeveer 50 ml warm water toe en laat nog 10 minuten sudderen.",
+      "Bedek de kip met uienringen en bestrooi met kaneel, rozijnen en bladpeterselie. Dek af en laat nog ongeveer 20 minuten zacht sudderen.",
+      "Serveer met couscous of brood."
+    ],
+    "source": "Kookboekfoto",
+    "page": "204",
+    "notes": [
+      "Totale tijd is geschat inclusief minimale marineertijd."
+    ]
+  },
+  {
+    "id": "harissa",
+    "title": "Harissa",
+    "category": "Saus",
+    "servings": null,
+    "prep_time_minutes": 10,
+    "passive_time_minutes": 60,
+    "cook_time_minutes": 0,
+    "total_time_minutes": 70,
+    "time_estimated": false,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "125 g gedroogde chilipepers zonder steeltjes",
+          "1 tl komijnpoeder",
+          "1 tl paprikapoeder, mild",
+          "1 el koriander, gehakt",
+          "1 el bladpeterselie, gehakt",
+          "3 el olijfolie"
+        ]
+      }
+    ],
+    "steps": [
+      "Doe de chilipepers in een kom, giet er kokend water op tot ze onderstaan en laat 1 uur wellen. Giet af.",
+      "Pureer de geweekte pepers met komijn, paprikapoeder, koriander, bladpeterselie en olijfolie tot een pasta."
+    ],
+    "source": "Kookboekfoto",
+    "page": "170",
+    "notes": []
+  },
+  {
+    "id": "hamburger-met-harissa",
+    "title": "Hamburger met harissa",
+    "category": "Lunchgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 10,
+    "total_time_minutes": 25,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Hamburgers",
+        "items": [
+          "500 g rundergehakt",
+          "1 tl paprikapoeder, mild",
+          "1 tl komijnpoeder",
+          "1 el bladpeterselie, gehakt",
+          "Snufje peper en zout"
+        ]
+      },
+      {
+        "name": "Serveren",
+        "items": [
+          "Pitbroodjes",
+          "Sla",
+          "Tomaat, in schijfjes",
+          "Gebakken uitjes",
+          "Harissa"
+        ]
+      }
+    ],
+    "steps": [
+      "Meng het gehakt met paprikapoeder, komijn, bladpeterselie, peper en zout tot een samenhangend mengsel.",
+      "Vorm burgers van ongeveer 4 cm dik en steek ze eventueel uit met een kommetje of kopje.",
+      "Gril de burgers gaar.",
+      "Serveer in een pitabroodje met sla, tomaat, gebakken uitjes en harissa."
+    ],
+    "source": "Kookboekfoto",
+    "page": "170",
+    "notes": [
+      "De serveeringrediënten hebben in de bron geen hoeveelheden."
+    ]
+  },
+  {
+    "id": "zeebaars-chermoula-oven",
+    "title": "Zeebaars met chermoula uit de oven",
+    "category": "Hoofdgerecht",
+    "servings": "2-3 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 35,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "1 zeebaars (of dorade) van ongeveer 500 g",
+          "3 worteltjes, geschrapt en in de lengte doormidden gesneden",
+          "1 rode paprika, in ringen",
+          "1 grote vleestomaat, ontveld en in dikke plakken",
+          "1/2 citroen, in schijfjes"
+        ]
+      },
+      {
+        "name": "Chermoula",
+        "items": [
+          "Sap van 1 citroen",
+          "3 el olijfolie",
+          "1 el koriander, gehakt",
+          "1 el bladpeterselie, gehakt",
+          "1 laurierblaadje",
+          "2 teentjes knoflook, geperst",
+          "1 sjalotje, gesnipperd",
+          "2 tl paprikapoeder, mild",
+          "1 tl komijnpoeder",
+          "Snufje cayennepeper",
+          "Zeezout",
+          "Peper, uit de molen"
+        ]
+      }
+    ],
+    "steps": [
+      "Meng alle ingrediënten voor de chermoula en houd apart.",
+      "Vet een ovenschaal in met olijfolie en bedek de bodem met de gehalveerde worteltjes.",
+      "Leg de schoongemaakte zeebaars op de wortels en verdeel paprika, tomaat en enkele schijfjes citroen over de vis.",
+      "Giet de chermoula over de vis en bak 15 tot 20 minuten in een voorverwarmde oven op 180 °C."
+    ],
+    "source": "Kookboekfoto",
+    "page": "154",
+    "notes": [
+      "De wortels onder de vis kunnen volgens de bron worden vervangen door plakjes aardappel of een andere harde groente."
+    ]
+  },
+  {
+    "id": "visballetjes-tomatensaus",
+    "title": "Visballetjes in tomatensaus",
+    "category": "Hoofdgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 20,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 50,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Visballetjes",
+        "items": [
+          "350 g visfilet, naar keuze",
+          "100 g gekookte rijst",
+          "1/2 el bladpeterselie, gehakt",
+          "1/2 el koriander, gehakt",
+          "1 tl paprikapoeder, mild",
+          "1/2 tl peper, uit de molen",
+          "1/2 tl zout"
+        ]
+      },
+      {
+        "name": "Tomatensaus",
+        "items": [
+          "2 el zonnebloemolie",
+          "1 teentje knoflook, geperst",
+          "1 sjalotje, gesnipperd",
+          "2 vleestomaten, ontveld, ontpit en gezeefd",
+          "1/2 tl kurkuma",
+          "1/2 tl paprikapoeder, mild",
+          "1/2 tl komijnpoeder",
+          "1/2 tl peper, uit de molen",
+          "1/2 tl zout",
+          "Snufje cayennepeper"
+        ]
+      },
+      {
+        "name": "Garnering",
+        "items": [
+          "1/4 ingemaakte citroen",
+          "1/2 el bladpeterselie, gehakt",
+          "1/2 el koriander, gehakt"
+        ]
+      }
+    ],
+    "steps": [
+      "Kook de rijst gaar en zet apart.",
+      "Fruit voor de saus de sjalot en knoflook in zonnebloemolie met de specerijen. Voeg de gezeefde tomaten toe en laat afgedekt 10 minuten sudderen.",
+      "Dep de visfilets droog en hak fijn in een keukenmachine. Meng kort met rijst, bladpeterselie, koriander, paprikapoeder, peper en zout.",
+      "Vorm balletjes ter grootte van een walnoot. Leg ze in de tomatensaus en laat afgedekt ongeveer 20 minuten zacht garen.",
+      "Garneer met reepjes ingemaakte citroen en verse koriander en peterselie. Serveer met brood."
+    ],
+    "source": "Kookboekfoto",
+    "page": "128",
+    "notes": []
+  },
+  {
+    "id": "omelette-berbere",
+    "title": "Omelette Berbère",
+    "category": "Lunchgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 10,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 10,
+    "total_time_minutes": 20,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "6 eieren",
+          "2 el olijfolie",
+          "1 kleine ui, gesnipperd",
+          "1 kleine rode paprika, in stukjes",
+          "1 tomaat, ontpit, ontveld en fijngehakt",
+          "1/2 teentje knoflook, geperst",
+          "1/2 el koriander, gehakt",
+          "1/2 el bladpeterselie, gehakt",
+          "Snufje peper, zout, paprika- en komijnpoeder",
+          "Zwarte en groene olijven om te garneren"
+        ]
+      }
+    ],
+    "steps": [
+      "Bak ui, knoflook en paprika in de olijfolie.",
+      "Voeg tomaat en kruiden toe en laat het mengsel ongeveer 5 minuten op laag vuur inkoken.",
+      "Breek de eieren boven het groentemengsel, dek af en laat de eieren zachtjes garen.",
+      "Garneer met olijven en wat vers gehakte bladpeterselie. Serveer met brood."
+    ],
+    "source": "Kookboekfoto",
+    "page": null,
+    "notes": []
+  },
+  {
+    "id": "courgette-wortelsoep",
+    "title": "Courgette-wortelsoep",
+    "category": "Voorgerecht / soep",
+    "servings": "6 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 40,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "2 middelgrote courgettes",
+          "300 g wortels, geschrapt en in blokjes",
+          "1 prei, fijngesneden",
+          "1 aardappel, in blokjes",
+          "1 el bladpeterselie, fijngehakt",
+          "1 el koriander, fijngehakt",
+          "1 el selderie, fijngesneden",
+          "1 tl peper, uit de molen",
+          "60 g boter",
+          "1 groentebouillonblokje",
+          "Eventueel 2 el crème fraîche"
+        ]
+      }
+    ],
+    "steps": [
+      "Smelt de boter in een soeppan en bak prei, wortel en aardappel kort zonder te laten kleuren.",
+      "Voeg 1,5 liter water toe en laat ongeveer 10 minuten zacht koken.",
+      "Voeg bouillonblokje, courgettes en fijngehakte kruiden toe en laat nog ongeveer 10 minuten koken.",
+      "Voeg eventueel crème fraîche toe en pureer met een staafmixer. Breng op smaak met peper en zout."
+    ],
+    "source": "Kookboekfoto",
+    "page": "54",
+    "notes": []
+  },
+  {
+    "id": "kip-met-paprika",
+    "title": "Kip met paprika",
+    "category": "Hoofdgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 20,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 95,
+    "total_time_minutes": 115,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "4 kippenpoten",
+          "2 grote uien",
+          "3 teentjes knoflook",
+          "2 Hongaarse puntpaprika's",
+          "1 grote rode puntpaprika",
+          "Plantaardige olie om te bakken",
+          "Zout en peper",
+          "1 1/2 el mild paprikapoeder",
+          "1/2-1 tl scherp paprikapoeder",
+          "1 el tomatenpuree",
+          "150 ml witte wijn (of bouillon)",
+          "250 ml kippenbouillon",
+          "150 g zure room",
+          "1 el meel",
+          "1/2 bosje peterselie"
+        ]
+      }
+    ],
+    "steps": [
+      "Dep de kippenpoten droog, snijd ze in het gewricht door en verwijder zo veel mogelijk vel. Snipper ui en knoflook en snijd de paprika's in dunne reepjes.",
+      "Bak het kippenvel uit in wat olie, verwijder het vel en gebruik een deel van het vet om de ui op laag tot middelhoog vuur 10 tot 15 minuten goudgeel te bakken. Voeg halverwege de knoflook toe.",
+      "Kruid de kip met zout en peper. Roer het milde paprikapoeder door de ui en bak kort mee. Voeg de kip toe en bak rondom aan.",
+      "Roer de tomatenpuree erdoor, blus met wijn en laat die bijna verdampen. Voeg ongeveer 200 ml bouillon toe en laat afgedekt 15 minuten garen.",
+      "Voeg de paprika toe, breng op smaak en laat afgedekt nog 45 tot 60 minuten zacht garen. Voeg zo nodig extra bouillon toe.",
+      "Meng zure room en meel glad. Roer een lepel saus uit de pan erdoor en voeg dit mengsel vervolgens aan de pan toe. Laat nog 5 tot 10 minuten zacht koken.",
+      "Bestrooi met grof gehakte peterselie en serveer."
+    ],
+    "source": "Kookboekfoto",
+    "page": "130",
+    "notes": [
+      "Recept aangeduid als Hongaars."
+    ]
+  },
+  {
+    "id": "augurkensoep",
+    "title": "Augurkensoep",
+    "category": "Soep",
+    "servings": "4 personen",
+    "prep_time_minutes": 15,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 40,
+    "total_time_minutes": 55,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "500 g vastkokende aardappelen",
+          "1 dikke wortel",
+          "200 g knolselderij",
+          "1 ui",
+          "1,2 l groente- of kippenbouillon",
+          "1 klein laurierblaadje",
+          "2 pimentkorrels",
+          "400 g augurken en wat inmaakvocht",
+          "Zout en peper",
+          "1 bosje dille",
+          "150 g zure room"
+        ]
+      }
+    ],
+    "steps": [
+      "Schil aardappelen, wortel en knolselderij en snijd in stukken. Snipper de ui.",
+      "Breng bouillon met laurier en piment aan de kook. Voeg aardappelen, wortel en selderij toe en laat afgedekt 20 tot 25 minuten zacht garen.",
+      "Rasp intussen de augurken grof of fijn. Voeg ze toe, breng op smaak met zout en peper en laat nog ongeveer 10 minuten meekoken.",
+      "Hak de dille grof. Breng de soep naar smaak met wat augurkenvocht en pureer eventueel heel kort zodat de soep lobbig blijft.",
+      "Roer een lepel soep door de zure room. Haal de pan van het vuur, roer het roommengsel erdoor en serveer met dille."
+    ],
+    "source": "Kookboekfoto",
+    "page": null,
+    "notes": [
+      "Recept aangeduid als Pools."
+    ]
+  },
+  {
+    "id": "groene-borsjtsj-veldzuringsoep",
+    "title": "Groene borsjtsj (veldzuringsoep)",
+    "category": "Soep",
+    "servings": "4 personen",
+    "prep_time_minutes": 20,
+    "passive_time_minutes": 0,
+    "cook_time_minutes": 40,
+    "total_time_minutes": 60,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "600 g vastkokende aardappelen",
+          "1 wortel",
+          "1 l groente- of vleesbouillon",
+          "1 laurierblad",
+          "4 eieren (M)",
+          "1 teentje knoflook",
+          "5 lente-uitjes",
+          "100 g babyspinazie",
+          "150 g veldzuring",
+          "1 bosje peterselie",
+          "5 takjes dille",
+          "25 g boter",
+          "Zout en peper",
+          "Vers geraspte nootmuskaat"
+        ]
+      }
+    ],
+    "steps": [
+      "Schil aardappelen en wortel en snijd in stukken. Breng de bouillon met laurier aan de kook, voeg aardappel en wortel toe en laat afgedekt 25 tot 30 minuten zacht garen.",
+      "Kook intussen de eieren in ongeveer 8 minuten hard, laat schrikken en afkoelen.",
+      "Hak knoflook en lente-ui fijn. Was spinazie, veldzuring, peterselie en dille; snijd de kruiden grof.",
+      "Haal ongeveer de helft van aardappelen en wortel uit de bouillon en verwijder het laurierblad. Pureer de resterende groenten in de bouillon met een staafmixer.",
+      "Bak de witte lente-uiringetjes en knoflook zacht in boter. Voeg kruiden en groene lente-ui toe en laat kort slinken. Doe dit samen met de spinazie in de soep en laat de spinazie slinken.",
+      "Doe de achtergehouden stukken aardappel en wortel terug in de soep, verwarm door en breng op smaak met zout, peper en nootmuskaat.",
+      "Pel de eieren, snijd elk ei in de lengte in 8 parten en verdeel over de kommen soep."
+    ],
+    "source": "Kookboekfoto",
+    "page": "93",
+    "notes": [
+      "Recept aangeduid als Rusland en Oekraïne."
+    ]
+  },
+  {
+    "id": "pelmeni-vleesvulling",
+    "title": "Pelmeni met vleesvulling",
+    "category": "Hoofdgerecht",
+    "servings": "4 personen",
+    "prep_time_minutes": 40,
+    "passive_time_minutes": 30,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 90,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Voor het deeg",
+        "items": [
+          "300 g tarwemeel (type 45 of 55), plus wat extra om te bewerken",
+          "Zout",
+          "1 ei (M)",
+          "100 ml melk",
+          "1 el plantaardige olie"
+        ]
+      },
+      {
+        "name": "Voor de vulling",
+        "items": [
+          "2 uien",
+          "Plantaardige olie om te bakken",
+          "3 takjes dille",
+          "6 takjes peterselie",
+          "300 g gemengd gehakt",
+          "Zout en peper",
+          "Chilipoeder, naar smaak",
+          "2 laurierblaadjes",
+          "Zure room, naar smaak"
+        ]
+      }
+    ],
+    "steps": [
+      "Meng het meel met 1/2 theelepel zout. Maak een kuiltje, voeg ei, melk en olie toe en meng. Voeg geleidelijk 50-75 ml heet water toe en kneed ongeveer 5 minuten krachtig tot een elastisch, glad deeg ontstaat.",
+      "Vorm een bal, wikkel het deeg in vershoudfolie en laat 20 tot 30 minuten rusten.",
+      "Snijd de uien fijn en bak ze in wat plantaardige olie goudgeel. Was dille en peterselie, dep droog en hak de blaadjes fijn.",
+      "Meng het gehakt met zout, peper, chilipoeder, de kruiden en de gebakken ui. Dek af en zet apart.",
+      "Kneed het deeg kort door, verdeel in 4 stukken en rol één stuk op een licht met meel bestoven werkvlak uit tot ongeveer 1-2 mm dik. Houd de rest afgedekt zodat het niet uitdroogt.",
+      "Steek rondjes van ongeveer 6 cm uit. Leg in het midden telkens ongeveer 1/2 theelepel vulling, vouw dicht tot een halve maan en druk de randen stevig aan. Breng de uiteinden naar elkaar toe, laat ze iets overlappen en druk vast. Herhaal met de rest van het deeg en de vulling.",
+      "Breng ruim water met zout en de laurierblaadjes aan de kook. Kook de pelmeni in porties en roer kort zodat ze niet aan de bodem plakken. Zodra ze boven komen drijven, laat je ze nog ongeveer 10 minuten zacht koken.",
+      "Schep de pelmeni met een schuimspaan uit de pan en serveer met zure room."
+    ],
+    "source": "Kookboekfoto",
+    "page": null,
+    "notes": [
+      "Recept aangeduid als Russisch.",
+      "Totale tijd is geschat op basis van de beschreven rust- en kooktijden."
+    ]
+  },
+  {
+    "id": "russische-salade",
+    "title": "Russische salade",
+    "category": "Salade / kleine hapjes",
+    "servings": "4 personen",
+    "prep_time_minutes": 30,
+    "passive_time_minutes": 180,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 240,
+    "time_estimated": true,
+    "ingredient_groups": [
+      {
+        "name": "Ingrediënten",
+        "items": [
+          "350 g vastkokende aardappelen",
+          "Zout",
+          "300 g kipfilet",
+          "500 ml kippenbouillon",
+          "2 dunne wortels",
+          "200 g diepvrieserwten",
+          "2 eieren (M)",
+          "6 el mayonaise (pot)",
+          "6 el zure room",
+          "1 tl mosterd",
+          "2 el azijn",
+          "Peper",
+          "1-2 scheutjes citroensap",
+          "2 takjes dragon",
+          "1/2 bosje krulpeterselie",
+          "100 g augurken",
+          "3 lente-uitjes"
+        ]
+      }
+    ],
+    "steps": [
+      "Was de aardappelen en kook ze afgedekt in gezouten water in 20 tot 25 minuten gaar. Giet af en laat uitdampen en afkoelen.",
+      "Spoel de kipfilet koud af en dep droog. Breng de kippenbouillon tegen de kook aan, leg de kip erin en laat afgedekt op lage temperatuur 12 tot 15 minuten garen. Haal de kip eruit, laat afkoelen en bewaar de bouillon.",
+      "Schil de wortels, snijd ze in kwarten en vervolgens in stukjes van ongeveer 5 mm. Kook ze 6 tot 8 minuten in ruim water, voeg tegen het einde de erwten toe en laat die 3 minuten meekoken. Giet af en laat uitlekken.",
+      "Kook de eieren in 7 tot 8 minuten hard, laat schrikken en afkoelen. Snijd ze doormidden, haal het eigeel eruit en wrijf dit door een fijne zeef door de mayonaise.",
+      "Meng de mayonaise met zure room, mosterd en 1 eetlepel azijn. Breng op smaak met zout, peper en citroensap.",
+      "Hak dragon en peterselie fijn. Snijd de eiwitten en augurken klein. Snijd ook de afgekoelde aardappelen en kipfilet in kleine stukjes.",
+      "Meng alles met de wortel, erwten en dressing. Laat de salade afgedekt 3 tot 4 uur in de koelkast intrekken.",
+      "Was de lente-uitjes en snijd ze met het groen in ringetjes. Meng door de salade, breng opnieuw op smaak met zout, peper, eventueel azijn en citroensap. Voeg bij een te droge salade eventueel een paar eetlepels kippenbouillon toe."
+    ],
+    "source": "Kookboekfoto",
+    "page": null,
+    "notes": [
+      "Recept aangeduid als Russisch.",
+      "Totale tijd is geschat op basis van de minimale koeltijd van 3 uur."
+    ]
+  }
+]
