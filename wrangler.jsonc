@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "recepten-api",
+  "main": "Worker.js",
+  "compatibility_date": "2026-08-14"
+}
