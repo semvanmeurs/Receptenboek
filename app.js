@@ -1,7 +1,35 @@
 const WORKER_URL = 'https://recepten-api.semvmeurs.workers.dev';
 
+const CATEGORY_LABELS = {
+  main: { nl: 'Hoofdgerecht', en: 'Main course' },
+  soup: { nl: 'Soep', en: 'Soup' },
+  lunch: { nl: 'Lunch', en: 'Lunch' },
+  vegetarian: { nl: 'Vegetarisch', en: 'Vegetarian' },
+  fish: { nl: 'Vis', en: 'Fish' },
+  side: { nl: 'Bijgerecht', en: 'Side dish' },
+  sauce: { nl: 'Saus', en: 'Sauce' },
+  dessert: { nl: 'Toetje', en: 'Dessert' },
+  other: { nl: 'Overig', en: 'Other' },
+};
+const CATEGORY_KEYWORDS = [
+  ['soup', ['soep', 'soup']],
+  ['dessert', ['toetje', 'dessert', 'gebak', 'taart', 'cake', 'cookie']],
+  ['sauce', ['saus', 'sauce', 'dressing', 'marinade']],
+  ['side', ['bijgerecht', 'salade', 'salad', 'side']],
+  ['lunch', ['lunch', 'broodje', 'sandwich']],
+  ['fish', ['vis', 'fish', 'zalm', 'salmon', 'garnaal', 'shrimp']],
+  ['vegetarian', ['vegetarisch', 'vegetarian', 'vegan']],
+  ['main', ['hoofdgerecht', 'main', 'diner', 'dinner']],
+];
+function guessCategoryId(text) {
+  const hay = String(text || '').toLowerCase();
+  for (const [id, keywords] of CATEGORY_KEYWORDS) if (keywords.some(k => hay.includes(k))) return id;
+  return 'other';
+}
+
 let RECIPES = [];
 let LANG = localStorage.getItem('lang') || 'nl';
+let ACTIVE_CAT = 'all';
 const $ = s => document.querySelector(s);
 const fmtTime = m => m == null ? 'Tijd onbekend' : m < 60 ? `${m} min` : `${Math.floor(m / 60)} u${m % 60 ? ` ${m % 60} min` : ''}`;
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -9,8 +37,9 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': 
 // Werkt zowel met het oude platte schema als het nieuwe tweetalige (nl/en) schema.
 function view(r) {
   const loc = r.nl || r.en ? (r[LANG] || r.nl || r.en) : r;
+  const categoryId = r.category_id || guessCategoryId(loc.category);
   return {
-    id: r.id, title: loc.title, category: loc.category,
+    id: r.id, title: loc.title, category: loc.category, categoryId,
     ingredient_groups: loc.ingredient_groups, steps: loc.steps, notes: loc.notes || [],
     servings: r.servings, total_time_minutes: r.total_time_minutes,
     time_estimated: r.time_estimated, page: r.page,
@@ -20,10 +49,21 @@ function allIngredients(v) { return v.ingredient_groups.flatMap(g => g.items).jo
 function checkedSet(id) { return new Set(JSON.parse(localStorage.getItem('checked:' + id) || '[]')); }
 function saveSet(id, set) { localStorage.setItem('checked:' + id, JSON.stringify([...set])); }
 
+function renderCategoryRow(allViews) {
+  const present = [...new Set(allViews.map(v => v.categoryId))];
+  const label = id => CATEGORY_LABELS[id]?.[LANG] || id;
+  const allLabel = LANG === 'en' ? 'All' : 'Alle';
+  const pills = [{ id: 'all', label: allLabel }, ...present.map(id => ({ id, label: label(id) }))];
+  $('#catRow').innerHTML = pills.map(p => `<button type="button" class="catBtn ${ACTIVE_CAT === p.id ? 'active' : ''}" data-cat="${esc(p.id)}">${esc(p.label)}</button>`).join('');
+  $('#catRow').querySelectorAll('.catBtn').forEach(b => b.onclick = () => { ACTIVE_CAT = b.dataset.cat; renderList($('#search').value); });
+}
+
 function renderList(q = '') {
   $('#detail').className = 'detail'; $('#list').style.display = 'grid';
   q = q.trim().toLowerCase();
-  const rows = RECIPES.map(view).filter(v => !q || (`${v.title} ${v.category || ''} ${allIngredients(v)}`).toLowerCase().includes(q));
+  const allViews = RECIPES.map(view);
+  renderCategoryRow(allViews);
+  const rows = allViews.filter(v => (ACTIVE_CAT === 'all' || v.categoryId === ACTIVE_CAT) && (!q || (`${v.title} ${v.category || ''} ${allIngredients(v)}`).toLowerCase().includes(q)));
   $('#list').innerHTML = rows.length ? rows.map(v => `<article class="card" data-id="${esc(v.id)}"><h2>${esc(v.title)}</h2><div class="meta"><span class="pill">${esc(v.category || 'Recept')}</span>${v.servings ? `<span class="pill">${esc(v.servings)}</span>` : ''}<span class="pill">${fmtTime(v.total_time_minutes)}${v.time_estimated ? ' · geschat' : ''}</span></div></article>`).join('') : '<div class="empty">Geen recepten gevonden.</div>';
   document.querySelectorAll('.card').forEach(x => x.onclick = () => openRecipe(x.dataset.id));
 }
@@ -55,22 +95,41 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-work
 
 // ── Taal-toggle ────────────────────────────────────────────────────────
 $('#langToggle').textContent = LANG.toUpperCase();
-$('#langToggle').onclick = () => { LANG = LANG === 'nl' ? 'en' : 'nl'; localStorage.setItem('lang', LANG); $('#langToggle').textContent = LANG.toUpperCase(); renderList($('#search').value); };
+$('#langToggle').onclick = () => { LANG = LANG === 'nl' ? 'en' : 'nl'; localStorage.setItem('lang', LANG); $('#langToggle').textContent = LANG.toUpperCase(); ACTIVE_CAT = 'all'; renderList($('#search').value); };
 
-// ── Recept toevoegen (link) ───────────────────────────────────────────
-const modal = $('#addModal'), status = $('#addStatus'), form = $('#addForm'), urlInput = $('#addUrl'), submitBtn = $('#addSubmit');
-$('#addOpen').onclick = () => { modal.classList.add('active'); status.textContent = ''; urlInput.value = ''; urlInput.focus(); };
+// ── Recept toevoegen (link of foto) ───────────────────────────────────
+const modal = $('#addModal'), status = $('#addStatus'), form = $('#addForm'), urlInput = $('#addUrl'), photoInput = $('#addPhotos'), codeInput = $('#addCode'), submitBtn = $('#addSubmit');
+let ADD_MODE = 'link';
+codeInput.value = localStorage.getItem('accessCode') || '';
+
+$('#addOpen').onclick = () => { modal.classList.add('active'); status.textContent = ''; urlInput.value = ''; photoInput.value = ''; urlInput.focus(); };
 $('#addClose').onclick = () => modal.classList.remove('active');
+$('#tabLink').onclick = () => { ADD_MODE = 'link'; $('#tabLink').classList.add('active'); $('#tabPhoto').classList.remove('active'); $('#paneLink').classList.add('active'); $('#panePhoto').classList.remove('active'); };
+$('#tabPhoto').onclick = () => { ADD_MODE = 'photo'; $('#tabPhoto').classList.add('active'); $('#tabLink').classList.remove('active'); $('#panePhoto').classList.add('active'); $('#paneLink').classList.remove('active'); };
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const url = urlInput.value.trim();
-  if (!url) return;
-  submitBtn.disabled = true; submitBtn.textContent = 'Bezig…'; status.textContent = 'Recept wordt opgehaald en toegevoegd…';
+  const code = codeInput.value.trim();
+  if (!code) { status.textContent = '⚠ Vul een toegangscode in.'; return; }
+  localStorage.setItem('accessCode', code);
+
+  submitBtn.disabled = true; submitBtn.textContent = 'Bezig…';
   try {
-    const res = await fetch(WORKER_URL + '/submit', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url }),
-    });
+    let res;
+    if (ADD_MODE === 'link') {
+      const url = urlInput.value.trim();
+      if (!url) throw new Error('Vul een link in.');
+      status.textContent = 'Recept wordt opgehaald en toegevoegd…';
+      res = await fetch(WORKER_URL + '/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url, code }) });
+    } else {
+      const files = photoInput.files;
+      if (!files || !files.length) throw new Error('Kies minstens één foto.');
+      status.textContent = 'Foto wordt geanalyseerd en toegevoegd…';
+      const fd = new FormData();
+      fd.append('code', code);
+      for (const f of files) fd.append('images', f);
+      res = await fetch(WORKER_URL + '/submit', { method: 'POST', body: fd });
+    }
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || `Fout ${res.status}`);
     status.textContent = `✓ "${data.recipe?.nl?.title || data.recipe?.title || 'Recept'}" ${data.action} (${data.method}).`;
