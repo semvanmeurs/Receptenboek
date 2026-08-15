@@ -1,9 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Recepten">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Mijn recepten</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#1f251f;background:#f5f1e8}*{box-sizing:border-box}body{margin:0;background:#f5f1e8}
+header{position:sticky;top:0;z-index:5;background:rgba(245,241,232,.94);backdrop-filter:blur(12px);padding:calc(env(safe-area-inset-top) + 14px) 16px 12px;border-bottom:1px solid #ddd6c9}
+.headerRow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.headerRow h1{margin:0;font-size:28px}
+.langBtn{border:1px solid #cfc7b8;background:#fff;border-radius:10px;padding:6px 12px;font-size:14px;font-weight:600}
+input[type=search]{width:100%;font-size:16px;padding:12px 14px;border:1px solid #cfc7b8;border-radius:12px;background:#fff}
+.catRow{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 2px;-webkit-overflow-scrolling:touch}
+.catRow::-webkit-scrollbar{display:none}
+.catBtn{flex:0 0 auto;border:1px solid #cfc7b8;background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;white-space:nowrap}
+.catBtn.active{background:#355e3b;border-color:#355e3b;color:#fff;font-weight:600}
+main{padding:14px 14px calc(24px + env(safe-area-inset-bottom));max-width:760px;margin:auto}
+.grid{display:grid;gap:10px}
+.card{background:#fff;border:1px solid #e1dbd0;border-radius:16px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.04);cursor:pointer}
+.card h2{font-size:19px;margin:0 0 7px}
+.meta{font-size:13px;color:#687067;display:flex;gap:8px;flex-wrap:wrap}
+.pill{background:#eef1ea;padding:4px 8px;border-radius:999px}
+.detail{display:none}.detail.active{display:block}
+.back{border:0;background:none;font-size:16px;padding:4px 0 14px;color:#355e3b}
+.detail h2{font-size:28px;margin:0 0 8px}
+.section{background:#fff;border:1px solid #e1dbd0;border-radius:16px;padding:16px;margin-top:12px}
+.section h3{margin:0 0 12px}
+.group-title{font-size:14px;color:#687067;margin:14px 0 6px;font-weight:650}
+.ingredient{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #eee9df}
+.ingredient:last-child{border-bottom:0}
+.ingredient input{width:20px;height:20px;margin-top:1px}
+.ingredient.checked span{text-decoration:line-through;color:#8b8f89}
+.steps{padding-left:22px}
+.steps li{margin:0 0 12px;line-height:1.45}
+.note{font-size:13px;color:#6d706b}
+.empty{text-align:center;color:#777;padding:40px 8px}
+.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));width:56px;height:56px;border-radius:50%;border:0;background:#355e3b;color:#fff;font-size:28px;line-height:1;box-shadow:0 3px 10px rgba(0,0,0,.2);z-index:6}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:10;align-items:flex-end}
+.modal.active{display:flex}
+.modalCard{background:#fff;border-radius:18px 18px 0 0;padding:20px;width:100%;max-width:760px;margin:auto;max-height:88vh;overflow-y:auto}
+.modalHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.modalHead h3{margin:0}
+.closeBtn{border:0;background:none;font-size:18px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tabBtn{flex:1;border:1px solid #cfc7b8;background:#fff;border-radius:10px;padding:10px;font-size:14px;font-weight:600}
+.tabBtn.active{background:#355e3b;border-color:#355e3b;color:#fff}
+.tabPane{display:none}.tabPane.active{display:block}
+#addForm label{font-size:13px;color:#687067;display:block;margin-bottom:6px}
+#addForm input[type=url],#addForm input[type=password],#addForm input[type=file]{width:100%;font-size:16px;padding:12px 14px;border:1px solid #cfc7b8;border-radius:12px;margin-bottom:12px}
+#addForm button[type=submit]{width:100%;padding:13px;border:0;border-radius:12px;background:#355e3b;color:#fff;font-size:16px;font-weight:600}
+#addForm button[type=submit]:disabled{opacity:.6}
+</style>
+</head>
+<body>
 <header>
   <div class="headerRow">
     <h1>Mijn recepten</h1>
     <button id="langToggle" class="langBtn">NL</button>
   </div>
   <input id="search" type="search" placeholder="Zoek op recept of ingrediënt">
+  <div id="catRow" class="catRow"></div>
 </header>
 <main><div id="list" class="grid"></div><div id="detail" class="detail"></div></main>
 <button id="addOpen" class="fab" aria-label="Recept toevoegen">+</button>
@@ -11,14 +73,27 @@
 <div id="addModal" class="modal">
   <div class="modalCard">
     <div class="modalHead"><h3>Recept toevoegen</h3><button id="addClose" class="closeBtn">✕</button></div>
+    <div class="tabs">
+      <button type="button" id="tabLink" class="tabBtn active">Link</button>
+      <button type="button" id="tabPhoto" class="tabBtn">Foto</button>
+    </div>
     <form id="addForm">
-      <label for="addUrl">Link naar recept</label>
-      <input id="addUrl" type="url" placeholder="https://..." required>
+      <div id="paneLink" class="tabPane active">
+        <label for="addUrl">Link naar recept</label>
+        <input id="addUrl" type="url" placeholder="https://...">
+      </div>
+      <div id="panePhoto" class="tabPane">
+        <label for="addPhotos">Foto('s) van kookboekpagina (max. 5)</label>
+        <input id="addPhotos" type="file" accept="image/*" capture="environment" multiple>
+      </div>
+      <label for="addCode">Toegangscode</label>
+      <input id="addCode" type="password" placeholder="Toegangscode" autocomplete="off">
       <button id="addSubmit" type="submit">Toevoegen</button>
       <p id="addStatus" class="note"></p>
     </form>
-    <p class="note">Foto-import volgt later.</p>
   </div>
 </div>
 
 <script src="app.js"></script>
+</body>
+</html>
